@@ -1,0 +1,17 @@
+.idea/
+.env
+.DS_Store
+
+# Dependency directory
+node_modules
+package-json.lock
+.secret
+
+# Generated files
+build
+dist
+coverage
+coverage.json
+coverageEnv
+allFiredEvents
+yarn-error.log
