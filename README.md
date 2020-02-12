@@ -6,7 +6,11 @@ You can see this contract in action by downloading [this digital wallet](https:/
 
 ### 1. Secret file
 
-Create a .secret file in the root directory containing your seed phrase. If you don't have one, [generate here](https://iancoleman.io/bip39/)
+Create a .secret file in the root directory containing your seed phrase (mnemonic). If you don't have one, [generate here](https://iancoleman.io/bip39/), file example:
+
+```
+sign endless vast upset century flavor execute wise provide pizza one mad engage fix verb
+```
 
 ### 2. Launch :rocket:
 
