@@ -28,7 +28,7 @@ $ ganache-cli
 
 for more info check [https://github.com/trufflesuite/ganache-cli](https://github.com/trufflesuite/ganache-cli)
 
-### 3. Deploy :rocket:
+### 4. Deploy :rocket:
 
 ```cmd
 $ truffle migrate
