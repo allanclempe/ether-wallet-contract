@@ -2,7 +2,7 @@
  * This code has not been reviewed.
  * Do not use or deploy this code before reviewing it personally first.
  */
-pragma solidity ^0.5.0;
+pragma solidity >=0.4.22 <0.9.0;
 
 contract TargaryenCoin {
     string public constant name = "TargaryenCoin";
