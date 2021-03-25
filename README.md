@@ -2,7 +2,7 @@ A simple ERC20 Ethereum smart contract.
 
 ## Getting Started
 
-You can see this contract in action by downloading [this digital wallet](https://github.com/allanclempe/ether-wallet-flutter/releases), or install [MetaMask extension](https://metamask.io/)
+You can see this contract in action by downloading [this digital wallet](https://github.com/allanclempe/ether-wallet-flutter), or install [MetaMask extension](https://metamask.io/)
 
 ### 1. Secret file
 
@@ -50,7 +50,7 @@ Compiling your contracts...
 ===========================
 > Compiling .\contracts\Migrations.sol
 > Compiling .\contracts\TrargaryenCoin.sol
-> Artifacts written to C:\@Projects\ether-wallet-contract\build\contracts
+> Artifacts written to \ether-wallet-contract\build\contracts
 > Compiled successfully using:
    - solc: 0.5.16+commit.9c3226ce.Emscripten.clang
 
@@ -131,13 +131,40 @@ Summary
 ```
 </details>
 
-<br />
 
-### Proxy
+### Interact with your contract
+
+If you got this far it's because you have your contract deployed and perhaps wondering how to interact with it. One way is using [metamask](https://metamask.io/), or you can use to a custom [digital wallet](https://github.com/allanclempe/ether-wallet-flutter) and start transferring tokens. 
+
+Flutter wallet:
+
+1. Change `app_config.dart` your `dev` configuration, IP address, port and contract address (output of step 4 have it, grab it from there)
+2. Change `main.dart` to use `dev` configuration.
+3. Run! 
+
+After initialized, you must create or import a wallet. The owner of the contract (who deployed the contract) owns all tokens because is defined in the constructor of the contract. To have access to it you have to choose the option to import and add the private key of the account used to deploy the contract. Confusing? Let's do it in steps.
+
+1. Bring up the deployment output again (step 4) and grab the account used to deploy the contract.
+```cmd 
+1_initial_migration.js
+======================
+Account to load with ETH:  0x96cb8F8d4d9fEb96efA57648fA1604220817c56E
+```
+2. Bring up the ganache-cli output and find in what position is the account used to deploy the contract. (usually is the first one, position 0)
+3. Find the correspondent private key right below.
+4. Back on the App, click on import.
+5. Choose private key.
+6. Copy private key and save.
+
+You should have 100 ETH and 100000000 TGE coins. 
+
+Enjoy.
+
+### Proxying
 
 If you using emulators poxy might be necessary. [iisexpress-proxy](https://www.npmjs.com/package/iisexpress-proxy) is a lightweight proxy. Even tough the main utility for it is to proxy iis express, you can use to proxy **ganache** port.
 
-cmd: `iisexpress-proxy 7545 to 7546`
+cmd: `iisexpress-proxy 8545 to 8546`
 
 ## Testing
 
