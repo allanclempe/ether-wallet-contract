@@ -134,9 +134,9 @@ Summary
 
 ### Interact with your contract
 
-If you got this far it's because you have your contract deployed and perhaps wondering how to interact with it. One way is using [metamask](https://metamask.io/), or you can use to a custom [digital wallet](https://github.com/allanclempe/ether-wallet-flutter) and start transferring tokens. 
+If you got this far it's because you have your contract deployed and perhaps wondering how to interact with it. One way is using [metamask](https://metamask.io/), or you can use a custom [digital wallet](https://github.com/allanclempe/ether-wallet-flutter). 
 
-Flutter wallet:
+Instructions to use flutter ether wallet:
 
 1. Change `app_config.dart` your `dev` configuration, IP address, port and contract address (output of step 4 have it, grab it from there)
 2. Change `main.dart` to use `dev` configuration.
