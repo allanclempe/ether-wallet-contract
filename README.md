@@ -132,11 +132,11 @@ Summary
 </details>
 
 
-### Interact with your contract
+### 5. Interact with your contract
 
 If you got this far it's because you have your contract deployed and perhaps wondering how to interact with it. One way is using [metamask](https://metamask.io/), or you can create a custom digital wallet. 
 
-Instructions to use with [flutter ether wallet](https://github.com/allanclempe/ether-wallet-flutter):
+5.1 - Instructions how to use with [flutter ether wallet](https://github.com/allanclempe/ether-wallet-flutter):
 
 1. Change `app_config.dart` your `dev` configuration, IP address, port and contract address (output of step 4 have it, grab it from there)
 2. Change `main.dart` to use `dev` configuration.
@@ -144,21 +144,36 @@ Instructions to use with [flutter ether wallet](https://github.com/allanclempe/e
 
 After initialized, you must create or import a wallet. The owner of the contract (who deployed the contract) owns all tokens because is defined in the constructor of the contract. To have access to it you have to choose the option to import and add the private key of the account used to deploy the contract. Confusing? Let's do it in steps.
 
-1. Bring up the deployment output again (step 4) and grab the account used to deploy the contract.
+4. Bring up the deployment output again (step 4) and grab the account used to deploy the contract.
 ```cmd 
 1_initial_migration.js
 ======================
 Account to load with ETH:  0x96cb8F8d4d9fEb96efA57648fA1604220817c56E
 ```
-2. Bring up the ganache-cli output and find in what position is the account used to deploy the contract. (usually is the first one, position 0)
-3. Find the correspondent private key right below.
-4. Back on the App, click on import.
-5. Choose private key.
-6. Copy private key and save.
+5. Bring up the ganache-cli output and find in what position is the account used to deploy the contract. (usually is the first one, position 0)
+6. Find the correspondent private key right below.
+7. Back on the App, click on import.
+8. Choose private key.
+9. Copy private key and save.
 
 You should have 100 ETH and 100000000 TGE coins. 
 
 Enjoy Hacking !
+
+5.2 - Instructions how to use with [metamask](https://metamask.io/):
+
+1. Install metamask extension on your preferable browser. (recommended to carefully save your seed phrase if you are going to use this wallet in the mainnet)
+2. Select `localhost 8545` (if you're not using the default port create a custom connection) 
+3. Find you private key in ganache console output (check steps 5.1 - 4, 5 and 6 above)
+4. Back in metamask, click on the top right-hand corner and `Import account`
+5. Past you private key and confirm
+6. You should have `Account 2` imported and loaded with ~100 ETH.
+7. Click on `Add token` and select custom token
+8. Find your contract address in the deployment (output from step 4).
+9. Past it in `Token contract address`. Token symbol and precision should be auto loaded from the contract.
+10. Next and add token. 
+
+Done! 
 
 ### Proxying
 
