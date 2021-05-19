@@ -76,6 +76,27 @@ module.exports = {
       skipDryRun: true, // Skip dry run before migrations? (default: false for public nets )
     },
 
+    bsctestnet: {
+      provider: () =>
+        new HDWalletProvider(
+          mnemonic,
+          `https://data-seed-prebsc-1-s1.binance.org:8545`
+        ),
+      network_id: 97,
+      confirmations: 10,
+      timeoutBlocks: 200,
+      skipDryRun: true,
+    },
+
+    matictestnet: {
+      provider: () =>
+        new HDWalletProvider(mnemonic, `https://rpc-mumbai.matic.today`),
+      network_id: 80001,
+      confirmations: 2,
+      timeoutBlocks: 200,
+      skipDryRun: true,
+    },
+
     // Useful for private networks
     // private: {
     // provider: () => new HDWalletProvider(mnemonic, `https://network.io`),
