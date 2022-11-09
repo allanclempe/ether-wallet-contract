@@ -37,7 +37,7 @@ $ truffle migrate
 or specify the network (testnet or mainnet)
 
 ```console
-# truffle migrate --network ropsten
+# truffle migrate --network goerli
 ```
 
 <details>
